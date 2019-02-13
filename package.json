@@ -1,0 +1,20 @@
+{
+  "name": "async-iterator-pipe",
+  "version": "1.0.0",
+  "description": "Pipe between async iterators and streams",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap test.js"
+  },
+  "keywords": [
+    "async",
+    "iterator",
+    "stream",
+    "pipe"
+  ],
+  "author": "Stephen Belanger <admin@stephenbelanger.com> (https://github.com/qard)",
+  "license": "MIT",
+  "devDependencies": {
+    "tap": "^12.5.2"
+  }
+}
