@@ -1,5 +1,7 @@
 # async-iterator-pipe
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Qard/async-iterator-pipe.svg)](https://greenkeeper.io/)
+
 Pipe between async iterators and streams.
 
 ## Install
