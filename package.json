@@ -4,7 +4,8 @@
   "description": "Pipe between async iterators and streams",
   "main": "index.js",
   "scripts": {
-    "test": "tap test.js"
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "test": "standard && nyc tap test.js"
   },
   "keywords": [
     "async",
@@ -15,6 +16,18 @@
   "author": "Stephen Belanger <admin@stephenbelanger.com> (https://github.com/qard)",
   "license": "MIT",
   "devDependencies": {
-    "tap": "^12.5.2"
-  }
+    "codecov": "^3.2.0",
+    "nyc": "^13.3.0",
+    "standard": "^12.0.1",
+    "tap": "^12.6.1"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Qard/async-iterator-pipe.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Qard/async-iterator-pipe/issues"
+  },
+  "homepage": "https://github.com/Qard/async-iterator-pipe#readme"
 }

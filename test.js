@@ -4,7 +4,7 @@ const tap = require('tap')
 
 const pipe = require('./')
 
-async function* produceIterator (n) {
+async function * produceIterator (n) {
   for (let i = 0; i < n; i++) {
     yield `produced "${i}"\n`
   }
@@ -20,7 +20,7 @@ function produceStream (n) {
   return stream
 }
 
-async function* splitLines (iterator) {
+async function * splitLines (iterator) {
   let buffer = ''
   for await (let item of iterator) {
     buffer += item
@@ -56,11 +56,10 @@ tap.test('stream -> iterator', async t => {
     t.equal(chunk, `produced "${i++}"\n`)
   }
 })
-
 tap.test('iterator -> iterator', async t => {
   t.plan(5)
 
-  async function* upper (iterator) {
+  async function * upper (iterator) {
     for await (let item of iterator) {
       yield item.toString().toUpperCase()
     }
