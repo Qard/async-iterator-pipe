@@ -1,6 +1,6 @@
 {
   "name": "async-iterator-pipe",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Pipe between async iterators and streams",
   "main": "index.js",
   "scripts": {
