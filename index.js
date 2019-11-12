@@ -1,4 +1,7 @@
 const assert = require('assert')
+const util = require('util')
+const stream = require('stream')
+const pipeline = util.promisify(stream.pipeline)
 
 function noop () {}
 
@@ -11,10 +14,7 @@ function isStream (value) {
 }
 
 async function pipeStream (iterator, stream) {
-  for await (let chunk of iterator) {
-    stream.write(chunk)
-  }
-  stream.end()
+  await pipeline(Readable.from(iterator), stream)
 }
 
 function pipe (source, target) {
